@@ -57,7 +57,7 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
               6ª EDICIÓN
             </p>
             <p className="text-sm md:text-md font-black tracking-wider text-neutral-200 mt-1 uppercase">
-              10 Y 11 DE OCTUBRE <span className="text-neutral-500">|</span> ISERA DISTILLERY <span className="text-neutral-500">|</span> MENDOZA - ARGENTINA
+              10 Y 11 DE OCTUBRE <span className="text-neutral-500">|</span> ISERÁ DISTILLERY <span className="text-neutral-500">|</span> MENDOZA - ARGENTINA
             </p>
           </div>
         </motion.div>
