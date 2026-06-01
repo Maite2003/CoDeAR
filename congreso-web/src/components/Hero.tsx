@@ -8,17 +8,18 @@ import { motion } from 'framer-motion';
  */
 interface HeroProps {
   registrationUrl: string;
-  whatsappUrl: string;
+  whatsappUrl1: string;
+  whatsappUrl2: string;
 }
 
 /**
  * Hero Section component representing the primary launch landing area.
  */
-export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
+export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: HeroProps) {
   return (
     <section 
       id="intro" 
-      className="relative text-white py-20 px-6 border-b-2 border-neutral-950 flex items-center justify-center min-h-[90vh] bg-[#0A0A0A] overflow-hidden"
+      className="relative text-white py-20 md:py-28 lg:py-16 px-4 sm:px-6 border-b border-[#1A1A1A] flex flex-col items-center justify-center min-h-[85vh] lg:min-h-[calc(100vh-5rem)] bg-[#0A0A0A] overflow-hidden w-full"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
@@ -36,7 +37,7 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
       <div className="absolute inset-0 bg-codear-noise pointer-events-none z-10" />
 
       {/* Main Structural Content Grid Wrapper */}
-      <div className="max-w-4xl mx-auto text-center relative z-20 space-y-12">
+      <div className="w-full max-w-4xl mx-auto text-center relative z-20 space-y-8 flex flex-col justify-center items-center px-2 pt-8 lg:pt-8 pb-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +48,7 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
             CONGRESO DE DESTILADORES DE ARGENTINA
           </p>
           
-          <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-white leading-none uppercase m-0 p-0 select-none">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter text-white leading-none uppercase m-0 p-0 select-none break-words">
             CODEAR <span className="block text-neutral-100">2026</span>
           </h1>
 
@@ -67,7 +68,7 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-2"
+          className="flex flex-col xl:flex-row gap-3.5 w-full max-w-xs sm:max-w-md xl:max-w-4xl justify-center items-center mx-auto px-2 pt-2"
         >
           {/* Primary button */}
           <a 
@@ -79,14 +80,22 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
             CONSEGUÍ TU ENTRADA
           </a>
 
-          {/* Secondary button */}
+          {/* Secondary buttons */}
           <a 
-            href={whatsappUrl}
+            href={whatsappUrl1}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs font-black tracking-widest px-12 py-4 rounded-xl hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
           >
-            BROCHURE COMERCIAL
+            BROCHURE - LaChapitaMDP
+          </a>
+          <a 
+            href={whatsappUrl2}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs font-black tracking-widest px-12 py-4 rounded-xl hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
+          >
+            BROCHURE - Caro Hoyos
           </a>
         </motion.div>
       </div>
