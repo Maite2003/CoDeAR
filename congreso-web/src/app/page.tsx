@@ -1,8 +1,9 @@
 import React from 'react';
 import Hero from "@/components/Hero";
+import Stats from '@/components/Stats';
 
 /**
- * Core Application Route Page Component (Server Component by default).
+ * Core Application Route Page Component.
  * Houses environment-level parameters and renders structural layouts.
  */
 export default function Page() {
@@ -12,7 +13,6 @@ export default function Page() {
 
   return (
     <main className="min-h-screen bg-[#0A0A0A] text-white pt-20 overflow-x-hidden selection:bg-[#D74E2A] selection:text-black">
-      {/* Primary Conversion Section */}
       <Hero 
         registrationUrl={REGISTRATION_URL} 
         whatsappUrl1={WHATSAPP_URL1} 
@@ -20,11 +20,11 @@ export default function Page() {
       />
 
       {/* Placeholder Sections for the Upcoming Phase 1 Modules */}
-      <div className="max-w-7xl mx-auto px-6 space-y-32 py-20">
+      <div className="max-w-7xl mx-auto px-6 space-y-32">
         
-        {/* Stats Component Target Section */}
-        <section id="stats" className="scroll-mt-24">
-          {/* Next up: Stats Component implementation */}
+        {/* Stats Component Section */}
+        <section id="stats" className="bg-[#0A0A0A] text-white py-12 md:py-20 border-b border-neutral-900 relative overflow-hidden w-full">
+          <Stats />
         </section>
 
         {/* Speakers Component Target Section */}
