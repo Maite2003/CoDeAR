@@ -4,6 +4,8 @@ import Stats from '@/components/Stats';
 import Speakers from '@/components/Speakers';
 import { getAllSpeakers, getAllSponsors } from '@/services/sanityService';
 import Sponsors from '@/components/Sponsors';
+import Banner from '@/components/Banner';
+import Expos from '@/components/Expos';
 
 /**
  * Core Application Route Page Component.
@@ -42,6 +44,11 @@ export default async function Page() {
         {/* Sponsors Component Target Section */}
         <section id="sponsors" className="bg-[#F5F5F3] text-neutral-900 py-6 md:py-10 w-full relative z-30 border-t border-neutral-200">
           <Sponsors sponsors={sponsors} /> {/* Use the fetched sponsors data */}
+        </section>
+
+          
+        <section id="banner" className="relative w-full xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw] h-[380px] sm:h-[450px] flex items-center justify-center overflow-hidden bg-neutral-950 z-20">
+          <Banner />
         </section>
 
         {/* Expo/Stands Component Target Section */}
