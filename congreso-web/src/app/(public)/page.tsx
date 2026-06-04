@@ -24,11 +24,16 @@ export default async function Page() {
 
   return (
     <main className="min-h-screen bg-[#0A0A0A] text-white pt-20 overflow-x-hidden selection:bg-[#D74E2A] selection:text-black">
-      <Hero 
-        registrationUrl={REGISTRATION_URL} 
-        whatsappUrl1={WHATSAPP_URL1} 
-        whatsappUrl2={WHATSAPP_URL2}
-      />
+      <section 
+        id="intro" 
+        className="relative text-white py-20 md:py-28 lg:py-16 px-4 sm:px-6 border-b border-[#1A1A1A] flex flex-col items-center justify-center min-h-[85vh] lg:min-h-[calc(100vh-5rem)] bg-[#0A0A0A] overflow-hidden w-full"
+      > 
+        <Hero 
+          registrationUrl={REGISTRATION_URL} 
+          whatsappUrl1={WHATSAPP_URL1} 
+          whatsappUrl2={WHATSAPP_URL2}
+        />
+      </section> 
 
       <div className="max-w-7xl mx-auto px-6 space-y-4">
         
@@ -38,22 +43,22 @@ export default async function Page() {
         </section>
 
         {/* Speakers Component Target Section */}
-        <section id="speakers" className="bg-[#0A0A0A] text-white py-15 md:py-20 border-b border-neutral-900/60 w-full relative z-30">
+        <section id="speakers" className="bg-[#0A0A0A] text-white py-15 md:py-20 w-full relative z-30">
           <Speakers speakers={speakers} /> {/* Use the fetched speakers data */}
         </section>
 
         {/* Sponsors Component Target Section */}
-        <section id="sponsors" className="bg-[#F5F5F3] text-neutral-900 py-15 md:py-20 w-full relative z-30 border-t border-neutral-200">
+        <section id="sponsors" className="bg-[#F2EFE9] text-neutral-900 py-15 md:py-20 w-full relative z-30 xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw]">
           <Sponsors sponsors={sponsors} /> {/* Use the fetched sponsors data */}
         </section>
 
           
-        <section id="banner" className="relative w-full xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw] h-[380px] sm:h-[450px] flex items-center justify-center overflow-hidden z-20">
+        <section id="banner" className="relative w-full xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw] h-screen flex items-center justify-center overflow-hidden z-20">
           <Banner />
         </section>
 
         {/* Expo/Stands Component Target Section */}
-        <section id="expo" className="bg-[#F2EFE9] text-neutral-900 py-15 md:py-20 w-full relative z-30">
+        <section id="expo" className="bg-[#F2EFE9] text-neutral-900 py-15 md:py-20 w-full relative z-30 xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw]">
           <Expos providers={stands} /> {/* Use the fetched expo stands data */}
         </section>
 

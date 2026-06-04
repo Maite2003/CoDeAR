@@ -17,11 +17,7 @@ interface HeroProps {
  */
 export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: HeroProps) {
   return (
-    <section 
-      id="intro" 
-      className="relative text-white py-20 md:py-28 lg:py-16 px-4 sm:px-6 border-b border-[#1A1A1A] flex flex-col items-center justify-center min-h-[85vh] lg:min-h-[calc(100vh-5rem)] bg-[#0A0A0A] overflow-hidden w-full"
-    >
-      {/* Background Image Container */}
+    <>
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <Image
           src="/codear-background.png"
@@ -99,6 +95,6 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
           </a>
         </motion.div>
       </div>
-    </section>
+      </>
   );
 }

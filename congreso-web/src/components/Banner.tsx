@@ -6,12 +6,11 @@ export default function Banner() {
   return (
     <>
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-100 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-left bg-no-repeat opacity-75 mix-blend-luminosity scale-100 pointer-events-none"
         style={{ backgroundImage: 'url("/codear-background.png")' }}
       />
       
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950" />
-
+      <div className="absolute inset-0 bg-radial from-transparent to-neutral-950/50 pointer-events-none" />
       <div className="relative z-10 w-full px-6 sm:px-12 max-w-5xl mx-auto text-center space-y-5">
         <p className="text-[10px] sm:text-xs font-black text-[#D74E2A] tracking-[0.4em] uppercase">
           // EL ARTE DE LA DESTILACIÓN

@@ -46,7 +46,7 @@ export default function Expo({ providers }: ExpoProps) {
                 <img
                   src={provider.logoUrl}
                   alt={provider.name}
-                  className="w-full h-full object-contain opacity-85 group-hover:opacity-100 transition-all duration-300 lg:group-hover:scale-105 filter drop-shadow-xs"
+                  className="w-full h-full object-contain transition-all duration-300 lg:group-hover:scale-105 filter drop-shadow-xs"
                   loading="lazy"
                 />
               </CardWrapper>
