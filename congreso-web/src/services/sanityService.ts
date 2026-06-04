@@ -6,8 +6,7 @@ import { client } from "@/sanity/lib/client";
 export interface SpeakerData {
   _id: string;
   name: string;
-  role: string;
-  bio?: string;
+  topic: string;
   order: number;
   imageUrl: string;
 }
@@ -33,8 +32,7 @@ export async function getAllSpeakers(): Promise<SpeakerData[]> {
   const query = `*[_type == "speaker"] | order(order asc) {
     _id,
     name,
-    role,
-    bio,
+    topic,
     order,
     "imageUrl": image.asset->url
   }`;

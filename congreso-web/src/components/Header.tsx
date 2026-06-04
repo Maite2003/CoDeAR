@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 /**
- * Premium Industrial Header Component for CODEAR 2026.
- * Features strict micro-interactions, responsive mobile drawers, and structured dropdown architectures.
+ * Header Component for CODEAR 2026.
  */
 export default function Header() {
   const [isEditionOpen, setIsEditionOpen] = useState(false);
@@ -82,7 +81,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* CTA Commercial Button (Following the red pill styling from image) */}
+        {/* CTA Commercial Button */}
         <div className="hidden xl:block">
           <a 
             href="https://www.congresodestiladoresargentinos.com.ar" 

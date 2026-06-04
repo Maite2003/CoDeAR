@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,10 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={`${inter.className} bg-[#0A0A0A] antialiased`}>
+        {/* The persistent navigation header stays on top of every single route */}
+        <Header />
+        
+        {/* Dynamic page content injects here */}
         {children}
       </body>
     </html>
