@@ -32,12 +32,6 @@ export const sponsor = defineType({
       description: 'URL de redirección comercial al hacer click en el logo.',
     }),
     defineField({
-      name: 'description',
-      title: 'Descripción (Opcional)',
-      type: 'text',
-      rows: 3,
-    }),
-    defineField({
       name: 'logo',
       title: 'Logo',
       type: 'image',
