@@ -22,6 +22,13 @@ export interface SponsorData {
   logoUrl: string;
 }
 
+export interface ExpoData {
+  _id: string;
+  name: string;
+  logoUrl: string;
+  websiteUrl?: string;
+}
+
 /**
  * Fetches all published speakers from Sanity, ordered by their custom display priority.
  * Uses GROQ to resolve image assets directly into clean CDN URLs.
@@ -64,6 +71,23 @@ export async function getAllSponsors(): Promise<SponsorData[]> {
     return await client.fetch<SponsorData[]>(query, {}, { next: { revalidate: 3600 } });
   } catch (error) {
     console.error('Failed to fetch sponsors from Sanity:', error);
+    return [];
+  }
+}
+
+export async function getAllExpoStands(): Promise<ExpoData[]> {
+  const query = `*[_type == "expo"] | order(order asc) {
+    _id,
+    name,
+    "logoUrl": logo.asset->url,
+    websiteUrl
+  }`;
+
+  try {
+    const data = await client.fetch(query, {}, { next: { revalidate: 3600 } });
+    return data || [];
+  } catch (error) {
+    console.error('Error fetching expo providers from Sanity:', error);
     return [];
   }
 }

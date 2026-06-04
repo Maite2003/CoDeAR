@@ -6,7 +6,7 @@ export default function Banner() {
   return (
     <>
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 mix-blend-luminosity scale-100 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-100 pointer-events-none"
         style={{ backgroundImage: 'url("/codear-background.png")' }}
       />
       
