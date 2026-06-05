@@ -93,7 +93,7 @@ export default function Header({ registrationUrl }: HeaderProps) {
             rel="noopener noreferrer"
             className="inline-block bg-[#D74E2A] text-black text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-sm hover:bg-[#b83f20] transition-colors shadow-lg shadow-[#D74E2A]/10"
           >
-            Tickets
+            Entradas
           </a>
         </div>
 
