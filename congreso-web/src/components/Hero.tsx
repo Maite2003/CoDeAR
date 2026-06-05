@@ -8,13 +8,14 @@ import { motion } from 'framer-motion';
  */
 interface HeroProps {
   registrationUrl: string;
-  whatsappUrl: string;
+  whatsappUrl1: string;
+  whatsappUrl2: string;
 }
 
 /**
  * Hero Section component representing the primary launch landing area.
  */
-export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
+export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: HeroProps) {
   return (
     <section 
       id="intro" 
@@ -22,15 +23,23 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        <Image
+        {/* <Image
           src="/codear-background.png"
           alt="CODEAR 2026 Brand Background Asset"
           fill
           priority
           quality={95}
-          className="object-cover object-center opacity-85"
+          className="object-cover bg-[1%_center] opacity-85"
+        /> */}
+        <div 
+          className="absolute inset-0 bg-no-repeat opacity-75 mix-blend-luminosity pointer-events-none"
+          style={{ 
+            backgroundImage: 'url("/codear-background.png")',
+            backgroundPosition: '10% center', /* 👈 Acá manejás el punto medio exacto */
+            backgroundSize: 'cover', /* En la mayoría de los monitores mantiene el cover */
+          }}
         />
-        <div className="absolute inset-0 bg-radial-[circle_at_center,transparent_40%,#0A0A0A_95%] opacity-40" />
+          <div className="absolute inset-0 bg-radial-[circle_at_center,transparent_40%,#0A0A0A_95%] opacity-40" />
       </div>
 
       <div className="absolute inset-0 bg-codear-noise pointer-events-none z-10" />
@@ -53,9 +62,9 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
 
           {/* Event Context Metadata Meta Badge */}
           <div className="inline-flex flex-col items-center pt-2">
-            <p className="text-sm md:text-base font-black tracking-widest text-[#D74E2A] uppercase">
+            <span className="inline-block bg-neutral-950/60 backdrop-blur-sm text-[#D74E2A] text-[10px] sm:text-xs font-black tracking-[0.2em] px-3 py-1 rounded-full uppercase border border-neutral-800/40">
               6ª EDICIÓN
-            </p>
+            </span>
             <p className="text-sm md:text-md font-black tracking-wider text-neutral-200 mt-1 uppercase">
               10 Y 11 DE OCTUBRE <span className="text-neutral-500">|</span> ISERÁ DISTILLERY <span className="text-neutral-500">|</span> MENDOZA - ARGENTINA
             </p>
@@ -67,7 +76,7 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-2"
+          className="flex flex-col xl:flex-row gap-3.5 w-full max-w-xs sm:max-w-md xl:max-w-4xl justify-center items-center mx-auto px-2 pt-2"
         >
           {/* Primary button */}
           <a 
@@ -79,14 +88,22 @@ export default function Hero({ registrationUrl, whatsappUrl }: HeroProps) {
             CONSEGUÍ TU ENTRADA
           </a>
 
-          {/* Secondary button */}
+          {/* Secondary buttons */}
           <a 
-            href={whatsappUrl}
+            href={whatsappUrl1}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs font-black tracking-widest px-12 py-4 rounded-xl hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
           >
-            BROCHURE COMERCIAL
+            BROCHURE - LaChapitaMDP
+          </a>
+          <a 
+            href={whatsappUrl2}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs font-black tracking-widest px-12 py-4 rounded-xl hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
+          >
+            BROCHURE - Caro Hoyos
           </a>
         </motion.div>
       </div>
