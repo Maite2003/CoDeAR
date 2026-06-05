@@ -37,7 +37,7 @@ export default function Header({ registrationUrl }: HeaderProps) {
             onMouseLeave={() => setIsEditionOpen(false)}
           >
             <button className="flex items-center space-x-1 hover:text-white transition-colors focus:outline-none py-2">
-              <span>6ª Edición</span>
+              <span className="inline-block bg-neutral-950/60 backdrop-blur-sm text-[#D74E2A] text-[10px] sm:text-xs font-black tracking-[0.2em] px-3 py-1 rounded-full uppercase border border-neutral-800/40">6ª Edición</span>
               <span className={`text-[10px] transition-transform duration-200 ${isEditionOpen ? 'rotate-180' : ''}`}>▼</span>
             </button>
             

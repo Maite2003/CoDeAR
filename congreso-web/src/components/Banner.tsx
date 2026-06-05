@@ -12,9 +12,9 @@ export default function Banner() {
       
       <div className="absolute inset-0 bg-radial from-transparent to-neutral-950/50 pointer-events-none" />
       <div className="relative z-10 w-full px-6 sm:px-12 max-w-5xl mx-auto text-center space-y-5">
-        <p className="text-[10px] sm:text-xs font-black text-[#D74E2A] tracking-[0.4em] uppercase">
+        <span className="inline-block bg-neutral-950/60 backdrop-blur-sm text-[#D74E2A] text-[10px] sm:text-xs font-black tracking-[0.2em] px-3 py-1 rounded-full uppercase border border-neutral-800/40">
           // EL ARTE DE LA DESTILACIÓN
-        </p>
+        </span>
         <h3 className="text-3xl sm:text-5xl font-black tracking-tighter text-white uppercase leading-[1.1] max-w-4xl mx-auto">
           "Donde la precisión técnica de la ingeniería se encuentra con la pasión artesanal del productor."
         </h3>

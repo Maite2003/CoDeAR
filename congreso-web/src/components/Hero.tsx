@@ -25,7 +25,7 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
           fill
           priority
           quality={95}
-          className="object-cover object-center opacity-85"
+          className="object-cover object-right opacity-85"
         />
         <div className="absolute inset-0 bg-radial-[circle_at_center,transparent_40%,#0A0A0A_95%] opacity-40" />
       </div>
@@ -50,11 +50,11 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
 
           {/* Event Context Metadata Meta Badge */}
           <div className="inline-flex flex-col items-center pt-2">
-            <p className="text-sm md:text-base font-black tracking-widest text-[#D74E2A] uppercase">
+            <span className="inline-block bg-neutral-950/60 backdrop-blur-sm text-[#D74E2A] text-[10px] sm:text-xs font-black tracking-[0.2em] px-3 py-1 rounded-full uppercase border border-neutral-800/40">
               6ª EDICIÓN
-            </p>
+            </span>
             <p className="text-sm md:text-md font-black tracking-wider text-neutral-200 mt-1 uppercase">
-              10 Y 11 DE OCTUBRE <span className="text-neutral-500">|</span> ISERÁ DISTILLERY <span className="text-neutral-500">|</span> MENDOZA - ARGENTINA
+              10 Y 11 DE OCTUBRE <span>|</span> ISERÁ DISTILLERY <span>|</span> MENDOZA - ARGENTINA
             </p>
           </div>
         </motion.div>
