@@ -26,7 +26,7 @@ export default function Expo({ providers }: ExpoProps) {
 
       {safeProviders.length === 0 ? (
         <div className="text-center font-bold tracking-widest text-[10px] py-16 text-neutral-400 uppercase">
-          No expo providers published yet.
+          Todavia no hay stands confirmados!
         </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16">
