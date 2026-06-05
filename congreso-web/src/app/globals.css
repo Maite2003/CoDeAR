@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Codec Pro';
+  src: url('./fonts/codec-pro.regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-codec {
+  font-family: 'Codec Pro', sans-serif;
+}
+
 :root {
   --color-codear-cream: #EFECE6; /* Flat matte bone-cream background */
   --color-codear-black: #0A0A0A; /* Deep industrial solid black */

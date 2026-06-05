@@ -19,30 +19,20 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
   return (
     <section 
       id="intro" 
-      className="relative text-white py-20 px-6 border-b-2 border-neutral-950 flex items-center justify-center min-h-[90vh] bg-[#0A0A0A] overflow-hidden"
+      className="min-h-screen text-white py-20 px-6 border-b-2 border-neutral-950 flex items-center justify-center bg-[#0A0A0A] overflow-hidden"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        {/* <Image
-          src="/codear-background.png"
+        <Image
+          src="/fallback-web_CODEAR.jpg"
           alt="CODEAR 2026 Brand Background Asset"
           fill
           priority
           quality={95}
-          className="object-cover bg-[1%_center] opacity-85"
-        /> */}
-        <div 
-          className="absolute inset-0 bg-no-repeat opacity-75 mix-blend-luminosity pointer-events-none"
-          style={{ 
-            backgroundImage: 'url("/codear-background.png")',
-            backgroundPosition: '10% center', /* 👈 Acá manejás el punto medio exacto */
-            backgroundSize: 'cover', /* En la mayoría de los monitores mantiene el cover */
-          }}
+          className="object-cover bg-left"
         />
-          <div className="absolute inset-0 bg-radial-[circle_at_center,transparent_40%,#0A0A0A_95%] opacity-40" />
+        
       </div>
-
-      <div className="absolute inset-0 bg-codear-noise pointer-events-none z-10" />
 
       {/* Main Structural Content Grid Wrapper */}
       <div className="max-w-4xl mx-auto text-center relative z-20 space-y-12">
@@ -52,23 +42,12 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="space-y-4"
         >
-          <p className="text-xs md:text-sm font-black tracking-[0.3em] text-neutral-300 uppercase">
-            CONGRESO DE DESTILADORES DE ARGENTINA
-          </p>
-          
-          <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-white leading-none uppercase m-0 p-0 select-none">
-            CODEAR <span className="block text-neutral-100">2026</span>
-          </h1>
 
-          {/* Event Context Metadata Meta Badge */}
-          <div className="inline-flex flex-col items-center pt-2">
-            <span className="inline-block bg-neutral-950/60 backdrop-blur-sm text-[#D74E2A] text-[10px] sm:text-xs font-black tracking-[0.2em] px-3 py-1 rounded-full uppercase border border-neutral-800/40">
-              6ª EDICIÓN
-            </span>
-            <p className="text-sm md:text-md font-black tracking-wider text-neutral-200 mt-1 uppercase">
-              10 Y 11 DE OCTUBRE <span className="text-neutral-500">|</span> ISERÁ DISTILLERY <span className="text-neutral-500">|</span> MENDOZA - ARGENTINA
-            </p>
-          </div>
+          <img 
+            src="/Logo-bajada2_CODEAR.svg" 
+            alt="CoDeAR 2026 - Congreso de Destiladores de Argentina" 
+            className="w-[90%] sm:w-[65%] md:w-full md:max-w-[650px] h-auto mx-auto" 
+          />
         </motion.div>
 
         {/* CTA Interaction Layout */}
@@ -76,14 +55,14 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="flex flex-col xl:flex-row gap-3.5 w-full max-w-xs sm:max-w-md xl:max-w-4xl justify-center items-center mx-auto px-2 pt-2"
+          className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap gap-4 w-full max-w-xs sm:max-w-xl lg:max-w-4xl justify-center items-center mx-auto px-2 pt-2"
         >
           {/* Primary button */}
           <a 
             href={registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-[#D74E2A] text-white text-xs font-black tracking-widest px-12 py-4 rounded-xl hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]"
+            className="font-codec rounded-none w-full sm:w-auto bg-[#D74E2A] text-white text-xs tracking-widest px-12 py-4 hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]"
           >
             CONSEGUÍ TU ENTRADA
           </a>
@@ -93,7 +72,7 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
             href={whatsappUrl1}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs font-black tracking-widest px-12 py-4 rounded-xl hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
+            className="font-codec rounded-none w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs tracking-widest px-12 py-4 hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
           >
             BROCHURE - LaChapitaMDP
           </a>
@@ -101,7 +80,7 @@ export default function Hero({ registrationUrl, whatsappUrl1, whatsappUrl2 }: He
             href={whatsappUrl2}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs font-black tracking-widest px-12 py-4 rounded-xl hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
+            className="font-codec rounded-none w-full sm:w-auto border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md text-neutral-200 text-xs tracking-widest px-12 py-4 hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700 active:scale-98 transition-all duration-200 uppercase text-center min-w-[240px]"
           >
             BROCHURE - Caro Hoyos
           </a>
