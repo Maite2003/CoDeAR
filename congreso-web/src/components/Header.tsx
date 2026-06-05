@@ -3,10 +3,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+interface HeaderProps {
+  registrationUrl: string;
+}
+
 /**
  * Header Component for CODEAR 2026.
  */
-export default function Header() {
+export default function Header({ registrationUrl }: HeaderProps) {
   const [isEditionOpen, setIsEditionOpen] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -84,7 +88,7 @@ export default function Header() {
         {/* CTA Commercial Button */}
         <div className="hidden xl:block">
           <a 
-            href="https://www.congresodestiladoresargentinos.com.ar" 
+            href={registrationUrl}
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-[#D74E2A] text-black text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-sm hover:bg-[#b83f20] transition-colors shadow-lg shadow-[#D74E2A]/10"

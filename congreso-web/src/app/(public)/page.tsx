@@ -12,9 +12,9 @@ import Expos from '@/components/Expos';
  * Houses environment-level parameters and renders structural layouts.
  */
 export default async function Page() {
-  const REGISTRATION_URL = "https://www.entradaweb.com.ar/evento/0caee9cb/step/1";
-  const WHATSAPP_URL1 = "https://wa.me/5492234226056?text=Hola!%20Me%20interesa%20recibir%20el%20Brochure%20Comercial%20de%20CODEAR%202026.";
-  const WHATSAPP_URL2 = "https://wa.me/5492616924201?text=Hola!%20Me%20interesa%20recibir%20el%20Brochure%20Comercial%20de%20CODEAR%202026.";
+  const REGISTRATION_URL = process.env.REGISTRATION_URL || '#';
+  const WHATSAPP_URL1 = process.env.WHATSAPP_URL1 || "https://wa.me/5492234226056?text=Hola!%20Me%20interesa%20recibir%20el%20Brochure%20Comercial%20de%20CODEAR%202026.";
+  const WHATSAPP_URL2 = process.env.WHATSAPP_URL2 || "https://wa.me/5492616924201?text=Hola!%20Me%20interesa%20recibir%20el%20Brochure%20Comercial%20de%20CODEAR%202026.";
 
   const [speakers, sponsors, stands] = await Promise.all([
     getAllSpeakers(),
