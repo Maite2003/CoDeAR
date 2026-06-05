@@ -46,7 +46,6 @@ export default function Header({ registrationUrl }: HeaderProps) {
                 <Link href="#speakers" className="block px-4 py-2.5 text-[11px] hover:bg-[#1A1A1A] hover:text-[#D74E2A] transition-colors">Oradores</Link>
                 <Link href="#sponsors" className="block px-4 py-2.5 text-[11px] hover:bg-[#1A1A1A] hover:text-[#D74E2A] transition-colors">Sponsors</Link>
                 <Link href="#expo" className="block px-4 py-2.5 text-[11px] hover:bg-[#1A1A1A] hover:text-[#D74E2A] transition-colors">Expo Stands</Link>
-                <Link href="#cronograma" className="block px-4 py-2.5 text-[11px] hover:bg-[#1A1A1A] hover:text-[#D74E2A] transition-colors">Cronograma</Link>
               </div>
             )}
           </div>

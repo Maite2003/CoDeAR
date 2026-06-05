@@ -27,7 +27,7 @@ export default async function Page() {
     <main className="min-h-screen bg-[#0A0A0A] text-white pt-20 overflow-x-hidden selection:bg-[#D74E2A] selection:text-black">
       <section 
         id="hero" 
-        className="relative text-white py-20 md:py-28 lg:py-16 px-4 sm:px-6 border-b border-[#1A1A1A] flex flex-col items-center justify-center min-h-[85vh] lg:min-h-[calc(100vh-5rem)] bg-[#0A0A0A] overflow-hidden w-full"
+        className="scroll-mt-10 relative text-white py-20 md:py-28 lg:py-16 px-4 sm:px-6 border-b border-[#1A1A1A] flex flex-col items-center justify-center min-h-[85vh] lg:min-h-[calc(100vh-5rem)] bg-[#0A0A0A] overflow-hidden w-full"
       > 
         <Hero 
           registrationUrl={REGISTRATION_URL} 
@@ -39,17 +39,17 @@ export default async function Page() {
       <div className="max-w-7xl mx-auto px-6 space-y-4">
         
         {/* Stats Component Section */}
-        <section id="stats" className="bg-[#0A0A0A] text-white py-15 md:py-20 border-b border-neutral-900 relative overflow-hidden w-full">
+        <section id="stats" className="scroll-mt-10 bg-[#0A0A0A] text-white py-15 md:py-20 border-b border-neutral-900 relative overflow-hidden w-full">
           <Stats />
         </section>
 
         {/* Speakers Component Target Section */}
-        <section id="speakers" className="bg-[#0A0A0A] text-white py-15 md:py-20 w-full relative z-30">
+        <section id="speakers" className="scroll-mt-10 bg-[#0A0A0A] text-white py-15 md:py-20 w-full relative z-30">
           <Speakers speakers={speakers} /> {/* Use the fetched speakers data */}
         </section>
 
         {/* Sponsors Component Target Section */}
-        <section id="sponsors" className="bg-[#F2EFE9] text-neutral-900 py-15 md:py-20 w-full relative z-30 xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw]">
+        <section id="sponsors" className="scroll-mt-10 bg-[#F2EFE9] text-neutral-900 py-15 md:py-20 w-full relative z-30 xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw]">
           <Sponsors sponsors={sponsors} /> {/* Use the fetched sponsors data */}
         </section>
 
@@ -59,7 +59,7 @@ export default async function Page() {
         </section>
 
         {/* Expo/Stands Component Target Section */}
-        <section id="expo" className="bg-[#F2EFE9] text-neutral-900 py-15 md:py-20 w-full relative z-30 xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw]">
+        <section id="expo" className="scroll-mt-10 bg-[#F2EFE9] text-neutral-900 py-15 md:py-20 w-full relative z-30 xl:w-screen xl:left-1/2 xl:right-1/2 xl:-ml-[50vw] xl:-mr-[50vw]">
           <Expos providers={stands} /> {/* Use the fetched expo stands data */}
         </section>
 
