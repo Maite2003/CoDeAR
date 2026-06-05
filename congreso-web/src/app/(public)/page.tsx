@@ -6,6 +6,7 @@ import { getAllExpoStands, getAllSpeakers, getAllSponsors } from '@/services/san
 import Sponsors from '@/components/Sponsors';
 import Banner from '@/components/Banner';
 import Expos from '@/components/Expos';
+import Footer from '@/components/Footer';
 
 /**
  * Core Application Route Page Component.
@@ -25,7 +26,7 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-[#0A0A0A] text-white pt-20 overflow-x-hidden selection:bg-[#D74E2A] selection:text-black">
       <section 
-        id="intro" 
+        id="hero" 
         className="relative text-white py-20 md:py-28 lg:py-16 px-4 sm:px-6 border-b border-[#1A1A1A] flex flex-col items-center justify-center min-h-[85vh] lg:min-h-[calc(100vh-5rem)] bg-[#0A0A0A] overflow-hidden w-full"
       > 
         <Hero 
@@ -63,6 +64,11 @@ export default async function Page() {
         </section>
 
       </div>
+
+      <Footer 
+        registrationUrl={REGISTRATION_URL} 
+        whatsappUrl={WHATSAPP_URL1} 
+      /> {/* Footer is outside the max-width container to span full width */}
 
     </main>
   );
