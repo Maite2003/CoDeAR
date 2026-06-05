@@ -20,13 +20,13 @@ export default function Header({ registrationUrl }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Brand Logo Identity */}
-        <Link href="/" className="text-xl font-black tracking-tighter text-white hover:text-[#D74E2A] transition-colors">
+        <Link href="#hero" className="text-xl font-black tracking-tighter text-white hover:text-[#D74E2A] transition-colors">
           CODEAR<span className="text-[#D74E2A]">.</span>
         </Link>
 
         {/* Desktop Navigation Menu */}
         <nav className="hidden xl:flex items-center space-x-6 xl:space-x-8 text-xs font-semibold uppercase tracking-widest text-[#999999]">
-          <Link href="/" className="hover:text-white transition-colors text-white">
+          <Link href="#hero" className="hover:text-white transition-colors text-white">
             Inicio
           </Link>
 
