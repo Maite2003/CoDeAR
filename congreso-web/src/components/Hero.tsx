@@ -87,7 +87,7 @@ export default function Hero({ registrationUrl, whatsappUrl1, workshopUrl }: Her
               rel="noopener noreferrer"
               className="font-codec rounded-none w-full sm:w-auto bg-[#D74E2A] text-white text-xs tracking-widest px-12 py-4 hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]"
             >
-              INSCRIBITE AL WROKSHOP
+              INSCRIPCIONES A WORKSHOPS
             </a>
           </div>
 
