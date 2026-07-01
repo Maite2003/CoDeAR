@@ -17,7 +17,7 @@ export default function InstagramFeed({ beholdFeedId, instagramUrl }: { beholdFe
             </a>
           </p>
         </div>
-        <div className="w-full max-w-5xl mx-auto bg-neutral-900/20 rounded-md p-4 context-layout">
+        <div className="w-full bg-neutral-900/20 rounded-md p-4 context-layout">
           {beholdFeedId ? (
             <BeholdWidget feedId={beholdFeedId} />
           ) : (
