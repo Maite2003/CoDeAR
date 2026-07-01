@@ -9,12 +9,13 @@ import { motion } from 'framer-motion';
 interface HeroProps {
   registrationUrl: string;
   whatsappUrl1: string;
+  workshopUrl: string;
 }
 
 /**
  * Hero Section component representing the primary launch landing area.
  */
-export default function Hero({ registrationUrl, whatsappUrl1 }: HeroProps) {
+export default function Hero({ registrationUrl, whatsappUrl1, workshopUrl }: HeroProps) {
   return (
     <section 
       id="intro" 
@@ -76,6 +77,17 @@ export default function Hero({ registrationUrl, whatsappUrl1 }: HeroProps) {
               className="font-codec rounded-none w-full sm:w-auto bg-[#D74E2A] text-white text-xs tracking-widest px-12 py-4 hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]"
             >
               SOLICITA TU BROCHURE
+            </a>
+          </div>
+
+          <div className="w-full flex justify-center">
+            <a 
+              href={workshopUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-codec rounded-none w-full sm:w-auto text-xs font-black tracking-widest px-12 py-4 active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px] border-2 border-neutral-800 bg-neutral-900/40 backdrop-blur-md hover:bg-neutral-800/60 hover:text-white hover:border-neutral-700"
+            >
+              INSCRIBITE AL WROKSHOP
             </a>
           </div>
 
