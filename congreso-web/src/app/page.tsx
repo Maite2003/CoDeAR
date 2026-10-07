@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from "@/components/Hero";
+import ProgramSection from "@/components/ProgramSection";
 import InstagramFeed from '@/components/InstagramFeed';
 
 /**
@@ -9,7 +10,10 @@ import InstagramFeed from '@/components/InstagramFeed';
 export default function Page() {
   const REGISTRATION_URL = process.env.REGISTRATION_URL || '#';
   const WHATSAPP_URL1 = process.env.WHATSAPP_URL1 || "https://wa.me/5492234226056?text=Hola!%20Me%20interesa%20recibir%20el%20Brochure%20Comercial%20de%20CODEAR%202026.";
-  const WORKSHOP_URL = process.env.WORKSHOP_URL || "https://forms.gle/q8J6Wi8gkZtQjAGo7";
+  const WORKSHOP_URL = process.env.WORKSHOP_PDF_URL || "/pdfs/workshops.pdf";
+  const ORADORES_URL = process.env.ORADORES_PDF_URL || "/pdfs/oradores.pdf";
+  const CRONOGRAMA_URL = process.env.CRONOGRAMA_PDF_URL || "/pdfs/cronograma.pdf";
+  const BENEFICIOS_URL = process.env.BENEFICIOS_PDF_URL || "/pdfs/beneficios.pdf";
   const BEHOLD_FEED_ID = process.env.NEXT_PUBLIC_BEHOLD_FEED_ID || "";
   const INSTAGRAM_URL = process.env.INSTAGRAM_URL || "https://www.instagram.com/co.de.ar";
   
@@ -19,10 +23,15 @@ export default function Page() {
       <Hero 
         registrationUrl={REGISTRATION_URL} 
         whatsappUrl1={WHATSAPP_URL1}
+      />
+
+      <ProgramSection
         workshopUrl={WORKSHOP_URL}
+        speakersUrl={ORADORES_URL}
+        scheduleUrl={CRONOGRAMA_URL}
+        benefitsUrl={BENEFICIOS_URL}
       />
       
-      {/* Additional sections (Speakers, Sponsors, Galleries) */}
       <InstagramFeed beholdFeedId={BEHOLD_FEED_ID} instagramUrl={INSTAGRAM_URL} />
     </main>
   );

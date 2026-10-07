@@ -9,13 +9,20 @@ import { motion } from 'framer-motion';
 interface HeroProps {
   registrationUrl: string;
   whatsappUrl1: string;
-  workshopUrl: string;
 }
+
+const buttonClass =
+  "font-codec rounded-none w-full sm:w-auto bg-[#D74E2A] text-white text-xs tracking-widest px-12 py-4 hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]";
 
 /**
  * Hero Section component representing the primary launch landing area.
  */
-export default function Hero({ registrationUrl, whatsappUrl1, workshopUrl }: HeroProps) {
+export default function Hero({ registrationUrl, whatsappUrl1 }: HeroProps) {
+  const actions = [
+    { href: registrationUrl, label: "CONSEGUÍ TU ENTRADA" },
+    { href: whatsappUrl1, label: "SOLICITA TU BROCHURE" },
+  ];
+
   return (
     <section 
       id="intro" 
@@ -31,7 +38,6 @@ export default function Hero({ registrationUrl, whatsappUrl1, workshopUrl }: Her
           quality={95}
           className="object-cover bg-left"
         />
-        
       </div>
 
       {/* Main Structural Content Grid Wrapper */}
@@ -57,39 +63,18 @@ export default function Hero({ registrationUrl, whatsappUrl1, workshopUrl }: Her
           transition={{ delay: 0.4, duration: 0.5 }}
           className="flex flex-col gap-6 w-full max-w-xs sm:max-w-xl lg:max-w-4xl justify-center items-center mx-auto px-2 pt-2"
         >
-          {/* Primary button - Siempre arriba o destacado */}
-          <div className="w-full flex justify-center">
-            <a 
-              href={registrationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-codec rounded-none w-full sm:w-auto bg-[#D74E2A] text-white text-xs tracking-widest px-12 py-4 hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]"
-            >
-              CONSEGUÍ TU ENTRADA
-            </a>
-          </div>
-
-          <div className="w-full flex justify-center">
-            <a 
-              href={whatsappUrl1}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-codec rounded-none w-full sm:w-auto bg-[#D74E2A] text-white text-xs tracking-widest px-12 py-4 hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]"
-            >
-              SOLICITA TU BROCHURE
-            </a>
-          </div>
-
-          <div className="w-full flex justify-center">
-            <a 
-              href={workshopUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-codec rounded-none w-full sm:w-auto bg-[#D74E2A] text-white text-xs tracking-widest px-12 py-4 hover:bg-[#b83f20] active:scale-98 transition-all duration-200 shadow-xl uppercase text-center min-w-[240px]"
-            >
-              INSCRIPCIONES A WORKSHOPS
-            </a>
-          </div>
+          {actions.map((action) => (
+            <div key={action.label} className="w-full flex justify-center">
+              <a
+                href={action.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonClass}
+              >
+                {action.label}
+              </a>
+            </div>
+          ))}
 
         </motion.div>
       </div>

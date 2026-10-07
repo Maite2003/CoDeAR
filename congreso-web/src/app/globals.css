@@ -43,3 +43,25 @@ body {
   font-weight: 900;
   letter-spacing: -0.02em;
 }
+
+.program-section {
+  background-color: #0d0d0d;
+  background-image: radial-gradient(ellipse at center, rgba(226, 91, 45, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.program-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(226, 91, 45, 0.35);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 22px 32px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.program-card:hover {
+  background-color: #d95328;
+  border-color: #d95328;
+  box-shadow: 0 0 24px rgba(217, 83, 40, 0.45);
+  transform: translateY(-2px);
+}
