@@ -26,7 +26,7 @@ export default function Hero({ registrationUrl, whatsappUrl1 }: HeroProps) {
   return (
     <section 
       id="intro" 
-      className="min-h-screen text-white py-20 px-6 border-b-2 border-neutral-950 flex items-center justify-center bg-[#0A0A0A] overflow-hidden"
+      className="relative min-h-[calc(100svh-4rem)] text-white py-20 px-6 border-b-2 border-neutral-950 flex items-center justify-center bg-[#0A0A0A] overflow-hidden"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">

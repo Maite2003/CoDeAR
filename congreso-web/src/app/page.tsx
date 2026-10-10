@@ -12,7 +12,6 @@ export default function Page() {
   const WHATSAPP_URL1 = process.env.WHATSAPP_URL1 || "https://wa.me/5492234226056?text=Hola!%20Me%20interesa%20recibir%20el%20Brochure%20Comercial%20de%20CODEAR%202026.";
   const WORKSHOP_URL = process.env.WORKSHOP_PDF_URL || "/pdfs/workshops.pdf";
   const ORADORES_URL = process.env.ORADORES_PDF_URL || "/pdfs/oradores.pdf";
-  const CRONOGRAMA_URL = process.env.CRONOGRAMA_PDF_URL || "/pdfs/cronograma.pdf";
   const BENEFICIOS_URL = process.env.BENEFICIOS_PDF_URL || "/pdfs/beneficios.pdf";
   const BEHOLD_FEED_ID = process.env.NEXT_PUBLIC_BEHOLD_FEED_ID || "";
   const INSTAGRAM_URL = process.env.INSTAGRAM_URL || "https://www.instagram.com/co.de.ar";
@@ -28,7 +27,6 @@ export default function Page() {
       <ProgramSection
         workshopUrl={WORKSHOP_URL}
         speakersUrl={ORADORES_URL}
-        scheduleUrl={CRONOGRAMA_URL}
         benefitsUrl={BENEFICIOS_URL}
       />
       

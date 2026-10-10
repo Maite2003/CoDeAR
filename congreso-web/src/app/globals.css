@@ -19,8 +19,8 @@
 }
 
 body {
-  background-color: var(--color-codear-cream);
-  color: var(--color-codear-black);
+  background-color: var(--color-codear-black);
+  color: #ffffff;
   font-family: 'Google Sans', 'Arial', sans-serif;
   letter-spacing: -0.01em;
   overflow-x: hidden;
